@@ -2,13 +2,12 @@
 * NOMBRE: #Bartolome#
 * PRIMER APELLIDO: #Vich#
 * SEGUNDO APELLIDO: #Lozano#
-* DNI: #43128952L#
 * EMAIL: #amadews23@hotmail.com#
 *****************************************************************/
 /****************************************************************
-* Módulo: calendario
+* MÃ³dulo: calendario
 *
-* Descripción:
+* DescripciÃ³n:
 *   Procedimientos y funciones para la generacion del calendario
 * , y realizar operaciones con de fechas
 *
@@ -19,9 +18,9 @@
 #include "calendario.h"
 
 /*=================================================================
-  Función para ver si es bisiesto el año pasado como parámetro
-  Son bisiestos los múltiplos de 4, salvo si son también mútiplos
-  de 100, que han de ser múltiplos de 400;
+  FunciÃ³n para ver si es bisiesto el aÃ±o pasado como parÃ¡metro
+  Son bisiestos los mÃºltiplos de 4, salvo si son tambiÃ©n mÃºtiplos
+  de 100, que han de ser mÃºltiplos de 400;
   ================================================================*/
 bool CalendarioMes::EsBisiesto( int anyo) {
   bool bisiesto;
