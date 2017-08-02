@@ -2,19 +2,18 @@
 * NOMBRE: #Bartolome#
 * PRIMER APELLIDO: #Vich#
 * SEGUNDO APELLIDO: #Lozano#
-* DNI: #43128952L#
 * EMAIL: #amadews23@hotmail.com#
 ********************************************************/
 /*********************************************************************
-* INTERFAZ de Módulo: GestionReservasSala , PRACTICA 4
+* INTERFAZ de MÃ³dulo: GestionReservasSala , PRACTICA 4
 *
-* Descripción:
+* DescripciÃ³n:
 *   Procedimientos y funciones para manejo de reservas
 *
 *********************************************************************/
 #pragma once
 /*=================================================================
- Declaración de constantes, Tipos y variables globales
+ DeclaraciÃ³n de constantes, Tipos y variables globales
  La practica 4 dice: "20 reservas por mes" y
  "3 meses maximos desde el actual" MesActual 1(Enero) AnyoActual 2017
  ================================================================*/
@@ -25,7 +24,7 @@ const int TamanyoNombre = 21;     /*El tamanyo maximo del nombre es 20 +1 para \
 const int HoraInicio = 8;
 const int MesActual = 1;          /*El numero de mes minimo para reservar*/
 const int MaxMes = 3;             /*El numero de mes maximo para reservar */
-const int MaxReservasMes = 21;     /*El nº maximo de reservas para un mes+1*/
+const int MaxReservasMes = 21;     /*El nÂº maximo de reservas para un mes+1*/
 /*const int MaxReservasMes = 3;*/   /*Esta linea comentada es para poder probar con 2 reservas maximas por mes(2+1)*/
 const int AnyoActual = 2017;      /*El anyo de inicio permitido es 2017*/
 extern int numReservas;
