@@ -2,7 +2,6 @@
 * NOMBRE: #Bartolome#
 * PRIMER APELLIDO: #Vich#
 * SEGUNDO APELLIDO: #Lozano#
-* DNI: #43128952L#
 * EMAIL: #amadews23@hotmail.com#
 ********************************************************/
 /*******************************************************
@@ -33,13 +32,13 @@ int main() {
   do {
       system("cls");
 
-      printf("Gestión de Reservas Sala\n" );
+      printf("GestiÃ³n de Reservas Sala\n" );
       printf("      Nueva Reserva                    (Pulsar N)\n");
       printf("      Anular Reserva                   (Pulsar A)\n");
-      printf("      Reservas de un Día               (Pulsar D)\n");
+      printf("      Reservas de un DÃ­a               (Pulsar D)\n");
       printf("      Reservas de un Mes               (Pulsar M)\n");
       printf("      Salir                            (Pulsar S)\n");
-      printf("Teclear una opción valida (N|A|D|M|S)\n" );
+      printf("Teclear una opciÃ³n valida (N|A|D|M|S)\n" );
       scanf( " %c", &tecla );
       tecla = toupper(tecla);
       switch (tecla) {
