@@ -2,21 +2,20 @@
 * NOMBRE: #Bartolome#
 * PRIMER APELLIDO: #Vich#
 * SEGUNDO APELLIDO: #Lozano#
-* DNI: #43128952L#
 * EMAIL: #amadews23@hotmail.com#
 ********************************************************/
 /*******************************************************
-* Interfaz de módulo: calendario
+* Interfaz de mÃ³dulo: calendario
 *
-* Descripción:
-*   Procedimientos y funciones para la impresión de un
+* DescripciÃ³n:
+*   Procedimientos y funciones para la impresiÃ³n de un
 *   calendario, y manejo de fechas
 *
 ********************************************************/
 #pragma once
 
 /*=================================================================
- Declaración de constantes, Tipos y variables globales
+ DeclaraciÃ³n de constantes, Tipos y variables globales
  ================================================================*/
 extern bool bisiesto;
 typedef enum TipoDia { Lunes, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo } ;
@@ -42,7 +41,7 @@ typedef struct CalendarioMes {
   ==============================================================================================================*/
   bool ComprobarDiaLaborable(int dia, int mes, int anyo);
   /*=============================================================================================================
-  Calcula 1º dia de la semana del mes solicitado
+  Calcula 1Âº dia de la semana del mes solicitado
   =============================================================================================================*/
   int PrimerDiaMes(int anyo, TipoMes mes);
 
