@@ -2,13 +2,12 @@
 * NOMBRE: #Bartolome#
 * PRIMER APELLIDO: #Vich#
 * SEGUNDO APELLIDO: #Lozano#
-* DNI: #43128952L#
 * EMAIL: #amadews23@hotmail.com#
 ********************************************************/
 /*********************************************************************
-* IMPLEMENTACION de Módulo: GestionReservasSala, PRACTICA 4
+* IMPLEMENTACION de MÃ³dulo: GestionReservasSala, PRACTICA 4
 *
-* Descripción:
+* DescripciÃ³n:
 *   Procedimientos y funciones para manejo de reservas
 *
 *********************************************************************/
@@ -41,7 +40,7 @@ void GestionReservaSala::NuevaReserva(TipoVectorReserva vectorReserva){
   char tecla2;
   /*-- Inicializamos reserva --*/
   InicializarReserva (reserva);
-  /*-- Comprobamos que no tengamos el máximo de reservas --*/
+  /*-- Comprobamos que no tengamos el mÃ¡ximo de reservas --*/
   if (ComprobarCantReservas() == true) {
     system("cls");
     printf("Nueva Reserva:\n");
@@ -66,7 +65,7 @@ void GestionReservaSala::NuevaReserva(TipoVectorReserva vectorReserva){
 
                         /*--Si la reserva solicitada supera el maximo de horas permitido --*/
                         if (reserva.duracion > maximopermitido) {
-                            printf("   La duración %d horas, supera las %d horas libres, *Ponga menos horas*\n",reserva.duracion, maximopermitido);
+                            printf("   La duraciÃ³n %d horas, supera las %d horas libres, *Ponga menos horas*\n",reserva.duracion, maximopermitido);
                             /*--Para que no sigua saliendo el mensaje anterior volvemos a dejar a 12 el numero de horas permitidas*/
                             maximopermitido = 12;
                         }
@@ -102,7 +101,7 @@ void GestionReservaSala::NuevaReserva(TipoVectorReserva vectorReserva){
                         if (anyovalido == true) {
                             printf("    Solo se puede en el anyo %d \n", AnyoActual);
                         }
-                        printf("      Año?");
+                        printf("      AÃ±o?");
                         fflush(stdin);
                         scanf("%d",&reserva.fecha.anyo);
                         /*-- fechacorrecta guarda True si la fecha esta bien formada o False si no --*/
@@ -124,7 +123,7 @@ void GestionReservaSala::NuevaReserva(TipoVectorReserva vectorReserva){
                 } while ( ComprobarFHD(reserva.hora, Hora) == true );
             } while(disponibilidaddiahora == false ); /*--Comprobar que el dia y la hora estan libres --*/
             do {
-                printf("      Duración (Horas completas)?");
+                printf("      DuraciÃ³n (Horas completas)?");
                 fflush(stdin);
                 scanf("%d",&reserva.duracion);
                 /*--Devuelve el numero de horas maximas posibles para reservar, sin tener en cuenta si esta ocupado --*/
@@ -139,7 +138,7 @@ void GestionReservaSala::NuevaReserva(TipoVectorReserva vectorReserva){
     /*--Incrementar la posicion a guardar el siguiente conjunto de valores--*/
     index++;
   } else {
-      printf("     Están superadas el numero maximo de reservas permitidas\n");
+      printf("     EstÃ¡n superadas el numero maximo de reservas permitidas\n");
       scanf("%s",&tecla2);
   }
 }
@@ -158,7 +157,7 @@ void GestionReservaSala::AnularReserva(TipoVectorReserva vectorReserva) {
   system("cls");
   printf("Anular Reserva:\n");
   do {
-      printf("      Persona que reservó?");
+      printf("      Persona que reservÃ³?");
       fflush(stdin);
       /*--Con esta linea capturamos texto, si hay espacio y despues texto guardamos apellido --*/
       scanf("%s%[^\n]s",&reserva.nombre, &reserva.apellido);
@@ -178,7 +177,7 @@ void GestionReservaSala::AnularReserva(TipoVectorReserva vectorReserva) {
           scanf("%d",&reserva.fecha.mes);
       } while (ComprobarFHD(reserva.fecha.mes, Mes) == true); /*Comprobamos valores numericos permitidos*/
       do {
-          printf("      Año?");
+          printf("      AÃ±o?");
           fflush(stdin);
           scanf("%d",&reserva.fecha.anyo);
           /*-- fechacorrecta guarda True si la fecha esta bien formada o False si no, sino repite el bucle de pedir fecha --*/
@@ -215,7 +214,7 @@ void GestionReservaSala::AnularReserva(TipoVectorReserva vectorReserva) {
       }
 }
 /*=================================================================================================
- devuelve el nº de indice del vectoReserva si encontro la reserva o 100 si no la encontro
+ devuelve el nÂº de indice del vectoReserva si encontro la reserva o 100 si no la encontro
 =================================================================================================*/
 int GestionReservaSala::BuscarReserva(TipoReserva reserva, const TipoVectorReserva vectorReserva) {
   int numeroreserva = 100;
@@ -256,7 +255,7 @@ void GestionReservaSala::ReservasdelDia(TipoVectorReserva vectorReserva) {
   TipoVectorCadenas v;
   bool fechacorrecta = true; /*--esta variable es true si la fecha es correcta--*/
   system("cls");
-  printf("Reservas del Día:\n");
+  printf("Reservas del DÃ­a:\n");
   do {
       do {
           if (fechacorrecta == false) {
@@ -270,7 +269,7 @@ void GestionReservaSala::ReservasdelDia(TipoVectorReserva vectorReserva) {
           scanf("%d",&reserva.fecha.mes);
       } while (ComprobarFHD(reserva.fecha.mes, Mes) == true); /*--comprobamos que mes esta dentro de los valores numericos permitidos--*/
       do {
-          printf("      Año?");
+          printf("      AÃ±o?");
           scanf("%d",&reserva.fecha.anyo);
           /*-- fechacorrecta guarda True si la fecha esta bien formada o False si no, sino repite el bucle de pedir fecha --*/
           fechacorrecta = calendario.FechaCorrecta(reserva.fecha.dia, reserva.fecha.mes, reserva.fecha.anyo);
@@ -286,7 +285,7 @@ void GestionReservaSala::ReservasdelDia(TipoVectorReserva vectorReserva) {
           }
       }
       system("cls");
-      printf("         Reservas del día: %d/%d/%d\n", reserva.fecha.dia, reserva.fecha.mes, reserva.fecha.anyo);
+      printf("         Reservas del dÃ­a: %d/%d/%d\n", reserva.fecha.dia, reserva.fecha.mes, reserva.fecha.anyo);
       printf("\n");
       printf("I-------------I--------------------------I\n");
       printf("I Horas:      I08  10  12  14  16  18  20I\n");
@@ -322,7 +321,7 @@ void GestionReservaSala::ReservasdelMes(TipoVectorReserva vectorReserva) {
       scanf("%d",&reserva.fecha.mes);
   } while (ComprobarFHD(reserva.fecha.mes, Mes) == true); /*--comprobamos que mes esta dentro de los valores numericos permitidos--*/
   do {
-     printf("      Año?");
+     printf("      AÃ±o?");
      scanf("%d",&reserva.fecha.anyo);
   } while ( ComprobarFHD(reserva.fecha.anyo, Anyo) == true);
       calendario.CrearMes(reserva.fecha.mes-1, reserva.fecha.anyo, vm, nombremes);
