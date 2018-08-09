@@ -11,9 +11,9 @@ El programa está formado por:
 
 -GestionReservasSala: interfaz GestionReservasSala.h e Implementación: GestionReservasSala.cpp
 
-##Tipo Abstracto CalendarioMes: Funciones y procedimientos :
+## Tipo Abstracto CalendarioMes: Funciones y procedimientos :
 
-###Públicos:
+### Públicos:
 
 BoolComprobarDiaLaborable, Devuelve true o false si un dia es Sábado o Domingo.
 
@@ -23,7 +23,7 @@ Int PrimerDiaMes, calcular primer dia de la semana a partir del primer dia de la
 
 Void CrearMes, crea el vectorMes
 
-###Privados:
+### Privados:
 
 Int NumeroDiasMes, número de dias que tiene un mes
 
@@ -33,9 +33,9 @@ Int CalcularBisiestoAcumulado:, usado para calcular el primer dia de semana de E
 
 Int PrimerDiaMesEnero, calcular primer dia de la semana de Enero.
 
-##Tipo Abastracto GestionReservasSala: Funciones y procedimientos:
+## Tipo Abastracto GestionReservasSala: Funciones y procedimientos:
 
-###Públicos:
+### Públicos:
 
 Void NuevaReserva
 
@@ -47,7 +47,7 @@ Void ReservasdelMes
 
 Void InicializarVectorReservas, inicializa elementos
 
-###Privados:
+### Privados:
 
 Int BuscarReserva, busca una reserva determinada y devuelve el indice del vectorReservas, sino la
 encuentra devuelve 100
@@ -86,17 +86,17 @@ Void CrearVectorMismaFecha, crea el vectorMismafecha con las reservas que tengan
 Void CrearVectorDisponibilidad, crea el vectorDisponoibilidad de tipo bool que cada elemento es una
 hora si el elemento es True la hora esta ocupada si False esta libre.
 
-##Registros(struct):
+## Registros(struct):
 
-###En GestionReservasSala:
+### En GestionReservasSala:
 
 TipoFecha, compuesto por {dia, mes, anyo}
 
 TipoReserva, compuesto de { nombre, apellido, fecha { dia, mes, anyo}, hora, duracio }
 
-##Vectores:
+## Vectores:
 
-###Para GestionReservaSala:
+### Para GestionReservaSala:
 
 TipoVectorReservas, compuesto por el registro TipoReserva.
 
@@ -104,7 +104,7 @@ TipoVectorMismafecha, compuesto por el registro TipoReserva.
 
 TipoVectorDisponibilidad de tipo bool
 
-###Para CalendarioMes:
+### Para CalendarioMes:
 
 usa el vectorMes. De tipo celda
 
@@ -114,13 +114,13 @@ GestionReservasSala: TipoNombre : nombre, apellidos
 
 CalendarioMes: TipoCelda,
 
-##Tipos Enumerados:
+## Tipos Enumerados:
 
 GestionResevasSala: TipoComprobacion { Dia, Mes, Anyo, Duracion}
 
 CalendarioMes: TipoDia, TipoMes
 
-##Constantes.
+## Constantes.
 
 GestionReservasSala: MaxReservas, MaxTiempoReservas, HoraInicio, MesActual, MaxMes,
 MaxReservasMes, AnyoActual.
@@ -131,7 +131,7 @@ los tiempos máximos para reservar, 12h desde las 8
 
 CalendarioMes: Maxceldas
 
-##Sobre el funcionamiento:
+## Sobre el funcionamiento:
 
 Una vez elegida la opción del menú principal accedemos a la sección deseada.
 
@@ -145,7 +145,7 @@ Vuelve a preguntar individualmente (dia, mes, año) al introducir un valor "no d
 Vuelve a preguntar desde dia (otra vez todo menos nombre), lanza su correspondiente mensaje, cuando detecta
 que un día no está bien formado, no es laboral, la fecha no está disponible u horas estan ocupadas.
 
-##Aspectos a terner en cuenta:
+## Aspectos a terner en cuenta:
 
 Este programa es una práctica en C+- (Subconjunto de C y C++) para la UNED, Asignatura Fundamentos de la programación.
 Al introducir nombre, sólo manejará un espacio entre nombre y apellido, no es posible poner un segundo
@@ -154,7 +154,7 @@ apellido.
 A la hora de anular una reserva en el nombre del cliente el programa NO diferencia entre mayúsculas y
 minúsculas, pero SI espacios.
 
-##Limitaciones:
+## Limitaciones:
 Sólo es posible realizar consultas para el periodo comprendido entre Enero y Marzo del 2017. Está limitado por constantes,
 por lo tanto sería posible aumentar el periodo.
 Y Sólo se podrán realizar un máximo de 20 consultas por mes.
